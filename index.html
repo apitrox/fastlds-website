@@ -35,7 +35,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #000;
+            background: #fff;
+            position: relative;
         }
         
         img {
@@ -44,9 +45,43 @@
             object-fit: contain;
             display: block;
         }
+        
+        .alert-banner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: yellow;
+            border: 3px solid black;
+            padding: 20px 40px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .alert-banner h1 {
+            color: red;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        @media (max-width: 768px) {
+            .alert-banner {
+                padding: 15px 30px;
+            }
+            
+            .alert-banner h1 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <img src="./images/fastlds_website_image.png" alt="FastLDS">
+    <div class="alert-banner">
+        <h1>Business Closed</h1>
+    </div>
 </body>
 </html>
